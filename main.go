@@ -1,9 +1,13 @@
 package main
 
 import (
-	"fmt"
+	"os"
+
+	"gofle/cmd"
 )
 
 func main() {
-	fmt.Println("Gofle")
+	if err := cmd.Execute(); err != nil {
+		os.Exit(1)
+	}
 }
